@@ -6,13 +6,13 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/22 11:14:52 by ishaaq           ###   ########.fr       */
+/*   Updated: 2025/08/22 11:26:04 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name.append("_clap_name"))
+DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 {
 	this->name_ = name;
 	this->hit_ = FragTrap::hit_;
