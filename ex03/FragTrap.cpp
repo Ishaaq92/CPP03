@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:59:42 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/21 18:19:28 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/08/22 11:17:46 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,10 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->hit_ = 100;
 	this->energy_ = 100;
 	this->damage_= 30;
+}
+FragTrap::FragTrap(void)
+{
+	std::cout << "FragTrap was constructed" << std::endl;
 }
 
 FragTrap::~FragTrap(void)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:24:01 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/21 18:17:30 by isahmed          ###   ########.fr       */
+/*   Updated: 2025/08/22 10:19:41 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,11 @@
 ClapTrap::ClapTrap(std::string name) : name_(name), hit_(10), energy_(10), damage_(0) 
 {
 	std::cout << "ClapTrap " << name << " has been constructed" << std::endl;
+}
+
+ClapTrap::ClapTrap(void)
+{
+	std::cout << "ClapTrap " << this->name_ << " has been constructed" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
