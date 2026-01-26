@@ -6,25 +6,28 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:18:05 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/21 18:14:49 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/01/26 16:40:05 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
-#include <iostream>
+# include <iostream>
 
 class ClapTrap
 {
 	private:
-		std::string	name_;
-	public:
-		ClapTrap(std::string name);
-		~ClapTrap(void);
-		void	attack(const std::string& target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
+
 	protected:
+		std::string	name_;
 		int			hit_;
 		int			energy_ ;
 		int			damage_ ;
+
+	public:
+		ClapTrap(std::string name);
+		~ClapTrap(void);
+		ClapTrap(ClapTrap &ct);
+		void	attack(const std::string& target);
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
 };
