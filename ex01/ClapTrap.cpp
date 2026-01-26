@@ -6,16 +6,32 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:24:01 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 16:36:45 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/01/26 19:04:27 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
+ClapTrap::ClapTrap(void)
+{
+	*this = ClapTrap("No Name");
+}
 
 ClapTrap::ClapTrap(std::string name) : name_(name), hit_(10), energy_(10), damage_(0) 
 {
 	std::cout << "ClapTrap " << this->name_ << " has been constructed" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap &rhs)
+{
+	if (this != &rhs)
+	{
+		this->name_ = rhs.name_;
+		this->hit_ = rhs.hit_;
+		this->energy_ = rhs.energy_;
+		this->damage_ = rhs.damage_;
+	}
+	return (*this);
 }
 
 ClapTrap::~ClapTrap(void)
@@ -46,6 +62,8 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->energy_ --;
 	std::cout << this->name_ << " repaired itself by " << amount <<" points!" << std::endl;
 }
+
+
 
 // void	ClapTrap::set_hit(int val)
 // {
