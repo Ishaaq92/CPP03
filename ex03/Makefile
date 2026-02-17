@@ -1,5 +1,5 @@
-CC=clang++
-CFLAGS= -Wall -Wextra -Werror -Wshadow  -Wno-shadow -std=c++98
+CXX = c++
+CXXFLAGS= -Wall -Wextra -Werror -Wshadow  -Wno-shadow -std=c++98
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 NAME = diamond
 OBJS = $(SRCS:.cpp=.o)
@@ -7,16 +7,17 @@ OBJS = $(SRCS:.cpp=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS) 
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) 
-	@$(MAKE) clean
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS) 
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
-
-re: fclean all
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJS)
 
 fclean: clean
 	rm -rf $(NAME)
+
+re: fclean all
+
+.PHONY: all clean fclean re

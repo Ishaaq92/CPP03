@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:37:13 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 16:20:21 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/17 10:25:38 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int main(void)
 {
     ClapTrap    a("Alice");
+    ClapTrap    e("Elliot");
 
 	// Test case: Normal
 	std::cout << "\nTest case: Normal" << std::endl;
@@ -36,5 +37,9 @@ int main(void)
 		c.beRepaired(1);
 	}
 	c.beRepaired(42);
+
+	//Test case: Elliot copies Charlies's values
+	e = c;
+
 	std::cout << std::endl;
 }

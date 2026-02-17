@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:24:01 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 16:03:15 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/17 10:22:31 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,14 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	this->hit_ += amount;
 	this->energy_ --;
 	std::cout << this->name_ << " repaired itself by " << amount <<" points!" << std::endl;
+}
+
+ClapTrap	&ClapTrap::operator=(const ClapTrap& rhs)
+{
+	this->hit_ = rhs.hit_;
+	this->energy_ = rhs.energy_;
+	this->damage_ = rhs.damage_;
+
+	return (*this);
 }
 
