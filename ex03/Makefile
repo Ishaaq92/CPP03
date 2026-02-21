@@ -1,5 +1,5 @@
 CXX = c++
-CXXFLAGS= -Wall -Wextra -Werror -Wshadow -Wshadow -std=c++98
+CXXFLAGS= -Wall -Wextra -Werror -Wshadow -std=c++98
 SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 NAME = diamond
 OBJS = $(SRCS:.cpp=.o)

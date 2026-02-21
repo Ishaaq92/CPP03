@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 14:13:49 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 15:00:19 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 
 DiamondTrap::DiamondTrap(void) : ClapTrap("_clap_name")
 {
+	this->hit_ = 100;
+	this->energy_ = 50;
+	this->damage_ = 30;
 	std::cout << "DiamondTrap was constructed" << std::endl;
 }
 
@@ -31,12 +34,8 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap was destructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &dt)
+DiamondTrap::DiamondTrap(const DiamondTrap &dt) : ClapTrap(dt)
 {
-	this->name_ = dt.name_;
-	this->hit_ = dt.hit_;
-	this->energy_ = dt.energy_;
-	this->damage_ = dt.damage_;
 	std::cout << "DiamondTrap was constructed" << std::endl;
 }
 
