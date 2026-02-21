@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:18:05 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 13:34:07 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:53:07 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ class ClapTrap
 	protected:
 
 	public:
+		ClapTrap(void);
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &ct);
 		~ClapTrap(void);

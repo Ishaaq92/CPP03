@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:38:55 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 19:05:24 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:48:53 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &rhs)
 	return (*this);
 }
 
-ScavTrap::ScavTrap(ScavTrap &st) : ClapTrap(st.name_) 
+ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st.name_) 
 {
 	std::cout << "ScavTrap " << this->name_ << " has been cloned" << std::endl;
 	this->hit_ = st.hit_;

@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:24:01 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 19:04:27 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:40:56 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ ClapTrap::~ClapTrap(void)
 	std::cout << "ClapTrap " << this->name_ << " has been destructed" << std::endl;
 }
 
-ClapTrap::ClapTrap(ClapTrap &ct) : name_(ct.name_), hit_(ct.hit_), energy_(ct.energy_), damage_(ct.damage_) 
+ClapTrap::ClapTrap(const ClapTrap &ct) : name_(ct.name_), hit_(ct.hit_), energy_(ct.energy_), damage_(ct.damage_) 
 {
 	std::cout << "ClapTrap " << this->name_ << " has been cloned" << std::endl;
 }

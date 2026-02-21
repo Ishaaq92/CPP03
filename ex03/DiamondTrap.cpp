@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 13:33:05 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:53:53 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 	this->energy_ = 50;
 	this->damage_ = 30;
 	std::cout << "DiamondTrap was constructed" << std::endl;
+}
+
+DiamondTrap::DiamondTrap(void)
+{
+	std::cout << "DiamondTrap was destructed" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap(void)
@@ -46,7 +51,7 @@ void	DiamondTrap::attack(const std::string& target)
 	ScavTrap::attack(target);
 }
 
-DiamondTrap	&DiamondTrap::operator=(DiamondTrap &rhs)
+DiamondTrap	&DiamondTrap::operator=(const DiamondTrap &rhs)
 {
 	this->hit_ = rhs.hit_;
 	this->energy_ = rhs.energy_;

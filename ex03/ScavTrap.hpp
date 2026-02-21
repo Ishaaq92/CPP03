@@ -3,22 +3,31 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
+/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:05:43 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/22 11:08:31 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/02/21 14:06:21 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include "ClapTrap.hpp" 
+# include <iostream>
+# include "ClapTrap.hpp" 
 
 class ScavTrap : virtual public ClapTrap
 {
+	private:
+
+	protected:
+
 	public:
-		ScavTrap(std::string name);
 		ScavTrap(void);
+		ScavTrap(const ScavTrap &st);
 		~ScavTrap(void);
+		ScavTrap	&operator=(const ScavTrap& rhs);
+		ScavTrap(std::string name);
+		void	guardGate(void);
 };
+
+

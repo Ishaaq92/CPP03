@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:59:42 by isahmed           #+#    #+#             */
-/*   Updated: 2026/01/26 19:25:12 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:43:25 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->hit_ = 100;
 	this->energy_ = 100;
 	this->damage_= 30;
+}
+
+FragTrap::FragTrap(const FragTrap &ft) : name_(ft.name_), hit_(ft.hit_), energy_(ft.energy_), damage_(ft.damage_) 
+{
+	std::cout << "FragTrap " << this->name_ << " has been cloned" << std::endl;
 }
 
 FragTrap	&FragTrap::operator=(const FragTrap &rhs)
