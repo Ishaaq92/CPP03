@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:59:42 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 13:43:25 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 14:35:23 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ FragTrap::FragTrap(void)
 	this->hit_ = 100;
     this->energy_ = 100;
     this->damage_ = 30;
-    std::cout << "FragTrap default constructor called" << std::endl;}
+    std::cout << "FragTrap default constructor called" << std::endl;
+}	
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
@@ -27,7 +28,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->damage_= 30;
 }
 
-FragTrap::FragTrap(const FragTrap &ft) : name_(ft.name_), hit_(ft.hit_), energy_(ft.energy_), damage_(ft.damage_) 
+FragTrap::FragTrap(const FragTrap &ft) : ClapTrap(ft)
 {
 	std::cout << "FragTrap " << this->name_ << " has been cloned" << std::endl;
 }
