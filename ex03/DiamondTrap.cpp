@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 13:53:53 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 14:13:49 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name + "_clap_name")
 	std::cout << "DiamondTrap was constructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(void)
+DiamondTrap::DiamondTrap(void) : ClapTrap("_clap_name")
 {
-	std::cout << "DiamondTrap was destructed" << std::endl;
+	std::cout << "DiamondTrap was constructed" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap(void)

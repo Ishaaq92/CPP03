@@ -6,7 +6,7 @@
 /*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:24:01 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 13:27:22 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 14:11:45 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,12 @@
 ClapTrap::ClapTrap(std::string name) : name_(name), hit_(10), energy_(10), damage_(0) 
 {
 	std::cout << "ClapTrap " << this->name_ << " has been constructed" << std::endl;
+}
+
+ClapTrap::ClapTrap(void)
+{
+	*this = ClapTrap("No Name");
+	std::cout << "ClapTrap default constructor called" << std::endl;
 }
 
 ClapTrap::~ClapTrap(void)
