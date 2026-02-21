@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/17 11:51:11 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/21 13:33:05 by isahmed          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap was destructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(DiamondTrap &dt)
+DiamondTrap::DiamondTrap(const DiamondTrap &dt)
 {
 	this->name_ = dt.name_;
 	this->hit_ = dt.hit_;
