@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:59:42 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 14:35:23 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/22 10:04:41 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,4 +54,3 @@ void    FragTrap::highFivesGuys(void)
 {
 	std::cout << "High Five request from FragTrap" << std::endl;
 }
-

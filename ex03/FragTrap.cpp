@@ -6,11 +6,19 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:59:42 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 14:14:49 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/22 10:04:41 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
+
+FragTrap::FragTrap(void)
+{
+	this->hit_ = 100;
+    this->energy_ = 100;
+    this->damage_ = 30;
+    std::cout << "FragTrap default constructor called" << std::endl;
+}	
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
@@ -20,12 +28,21 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->damage_= 30;
 }
 
-FragTrap::FragTrap(void) : ClapTrap("No name")
+FragTrap::FragTrap(const FragTrap &ft) : ClapTrap(ft)
 {
-	std::cout << "FragTrap was constructed" << std::endl;
-	this->hit_ = 100;
-	this->energy_ = 100;
-	this->damage_= 30;
+	std::cout << "FragTrap " << this->name_ << " has been cloned" << std::endl;
+}
+
+FragTrap	&FragTrap::operator=(const FragTrap &rhs)
+{
+	if (this != &rhs)
+	{
+		this->name_ = rhs.name_;
+		this->hit_ = rhs.hit_;
+		this->energy_ = rhs.energy_;
+		this->damage_ = rhs.damage_;
+	}
+	return (*this);
 }
 
 FragTrap::~FragTrap(void)
@@ -37,4 +54,3 @@ void    FragTrap::highFivesGuys(void)
 {
 	std::cout << "High Five request from FragTrap" << std::endl;
 }
-

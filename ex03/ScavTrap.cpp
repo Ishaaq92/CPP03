@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:38:55 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 15:48:02 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/22 10:23:58 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 	
 ScavTrap::ScavTrap(void) : ClapTrap("No Name")
 {
-	std::cout << "ScavTrap " << this->name_ << " has been constructed" << std::endl;
 	this->hit_ = 100;
 	this->energy_ = 50;
 	this->damage_ = 20;
+	std::cout << "ScavTrap " << this->name_ << " has been constructed" << std::endl;
 }
 
 void	ScavTrap::attack(const std::string& target)
@@ -57,12 +57,9 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &rhs)
 	return (*this);
 }
 
-ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st.name_) 
+ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st) 
 {
 	std::cout << "ScavTrap " << this->name_ << " has been cloned" << std::endl;
-	this->hit_ = st.hit_;
-	this->energy_ = st.energy_;
-	this->damage_ = st.damage_;
 }
 
 ScavTrap::~ScavTrap(void)
@@ -74,4 +71,3 @@ void	ScavTrap::guardGate(void)
 {
 	std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
 }
-

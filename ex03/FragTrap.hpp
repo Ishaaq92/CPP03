@@ -6,20 +6,27 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 16:57:00 by isahmed           #+#    #+#             */
-/*   Updated: 2025/08/22 11:15:26 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/02/22 10:22:56 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include "ClapTrap.hpp"
+# include <iostream>
+# include "ClapTrap.hpp"
 
 class FragTrap : virtual public ClapTrap
 {
+	private:
+
+	protected:
+
     public:
-        FragTrap(std::string name);
         FragTrap(void);
+        FragTrap(const FragTrap &ft);
+        FragTrap(std::string name);
         ~FragTrap(void);
+		FragTrap	&operator=(const FragTrap &rhs);
         void    highFivesGuys(void);
 };
+
