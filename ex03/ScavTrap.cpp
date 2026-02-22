@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 17:38:55 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/22 10:23:58 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/02/22 10:30:07 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ void	ScavTrap::attack(const std::string& target)
 {
 	if (this->energy_ <= 0)
 	{
-		std::cout << this->name_ << " can't repair itself: No energy" << std::endl;
+		std::cout << this->name_ << " Can't repair itself: No energy" << std::endl;
 		return ;
 	}
 	else if (this->hit_ <= 0)
 	{
-		std::cout << this->name_ << " can't repair itself: No hit points" << std::endl;
+		std::cout << this->name_ << " Can't attack: No hit points" << std::endl;
 		return ;
 	}
 	this->energy_ --;

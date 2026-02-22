@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isahmed <isahmed@student.42.fr>            +#+  +:+       +#+        */
+/*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 15:40:56 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/02/22 10:28:30 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,6 @@ DiamondTrap::~DiamondTrap(void)
 
 DiamondTrap::DiamondTrap(const DiamondTrap &dt) : ClapTrap(dt), ScavTrap(dt), FragTrap(dt)
 {
-	this->name_ = dt.name_;
-	this->hit_ = dt.hit_;
-	this->energy_ = dt.energy_;
-	this->damage_ = dt.damage_;
 	std::cout << "DiamondTrap was cloned" << std::endl;
 }
 
