@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/21 18:21:00 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/22 10:28:30 by ishaaq           ###   ########.fr       */
+/*   Updated: 2026/03/01 06:59:10 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ DiamondTrap::~DiamondTrap(void)
 	std::cout << "DiamondTrap was destructed" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &dt) : ClapTrap(dt), ScavTrap(dt), FragTrap(dt)
+DiamondTrap::DiamondTrap(const DiamondTrap &dt) : ClapTrap(dt), ScavTrap(dt), FragTrap(dt), name_(dt.name_)
 {
-	std::cout << "DiamondTrap was cloned" << std::endl;
+	std::cout << "DiamondTrap " << dt.name_ << " has been cloned" << std::endl;
 }
 
 void	DiamondTrap::whoAmI(void)
@@ -56,10 +56,7 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &rhs)
     if (this != &rhs)
     {
         ClapTrap::operator=(rhs);
-        this->name_ = rhs.name_;
-		this->hit_ = rhs.hit_;
-		this->energy_ = rhs.energy_;
-		this->damage_ = rhs.damage_;
+		this->name_ = rhs.name_;
     }
     return (*this);
 }

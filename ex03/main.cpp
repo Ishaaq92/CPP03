@@ -6,7 +6,7 @@
 /*   By: ishaaq <ishaaq@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/20 16:37:13 by isahmed           #+#    #+#             */
-/*   Updated: 2026/02/21 14:36:50 by isahmed          ###   ########.fr       */
+/*   Updated: 2026/03/01 06:53:55 by ishaaq           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main(void)
 {
-    DiamondTrap    a("Alice");
-    DiamondTrap   b("Bob");
+    DiamondTrap	a("Alice");
+    DiamondTrap	b("Bob");
 
     b.attack("Alice");
 	b.highFivesGuys();
@@ -23,4 +23,8 @@ int main(void)
     a.beRepaired(22);
 	a.whoAmI();
 	b.whoAmI();
+	
+	DiamondTrap	c = b;
+    // DiamondTrap   c(b);
+	c.whoAmI();
 }
